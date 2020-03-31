@@ -64,8 +64,9 @@ public class FizzBuzzTranslate {
         String str = String.valueOf(number);
         char[] chars = str.toCharArray();
         String strResult = "";
-        for (char character : chars) {
-            switch (character) {
+        int index = 0, whiteSpace = index + 1;
+        for (; index < chars.length; index++, whiteSpace++) {
+            switch (chars[index]) {
                 case '1':
                     strResult += "mot";
                     break;
@@ -87,6 +88,9 @@ public class FizzBuzzTranslate {
                 case '9':
                     strResult += "chin";
                     break;
+            }
+            if (whiteSpace < chars.length) {
+                strResult += " ";
             }
         }
         return strResult;
