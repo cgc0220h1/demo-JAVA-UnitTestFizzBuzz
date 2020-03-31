@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTranslateTest {
 
-    @DisplayName("Test with 1")
-    @Test
-    void testTranslateCase1() {
-        int number = 1;
-        String expectedResult = "N/A";
-        String actualResult = FizzBuzzTranslate.translate(number);
-        assertEquals(expectedResult, actualResult);
-    }
+//    @DisplayName("Test with 1")
+//    @Test
+//    void testTranslateCase1() {
+//        int number = 1;
+//        String expectedResult = "N/A";
+//        String actualResult = FizzBuzzTranslate.translate(number);
+//        assertEquals(expectedResult, actualResult);
+//    }
 
     @DisplayName("Test with 9")
     @Test
