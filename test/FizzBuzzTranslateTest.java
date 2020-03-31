@@ -76,4 +76,13 @@ class FizzBuzzTranslateTest {
         String actualResult = FizzBuzzTranslate.translate(number);
         assertEquals(expectedResult, actualResult);
     }
+
+    @DisplayName("Test with 2 with vietnamese result")
+    @Test
+    void testTranslateCase9() {
+        int number = 2;
+        String expectedResult = "hai";
+        String actualResult = FizzBuzzTranslate.translate(number);
+        assertEquals(expectedResult, actualResult);
+    }
 }

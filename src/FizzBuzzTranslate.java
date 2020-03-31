@@ -5,10 +5,11 @@ public class FizzBuzzTranslate {
     public static final String FIZZ = "Fizz";
 
     public static String translate(int number) {
-       if (isDivisibleByThreeAndFive(number)) {
-           return FIZZ_BUZZ;
-       }
-        if (isDivisibleByFive(number)) {
+        if (isDivisibleByThreeAndFive(number)) {
+            return FIZZ_BUZZ;
+        }
+        if (isDivisibleByFive(number)
+                || isContainedFive(number)) {
             return BUZZ;
         }
         if (isDivisibleByThree(number)
@@ -35,6 +36,17 @@ public class FizzBuzzTranslate {
         char[] chars = str.toCharArray();
         for (char character : chars) {
             if (character == '3') {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isContainedFive(int number) {
+        String str = String.valueOf(number);
+        char[] chars = str.toCharArray();
+        for (char character : chars) {
+            if (character == '5') {
                 return true;
             }
         }
