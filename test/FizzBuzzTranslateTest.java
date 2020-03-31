@@ -11,7 +11,7 @@ class FizzBuzzTranslateTest {
         int number = 1;
         String expectedResult = "N/A";
         String actualResult = FizzBuzzTranslate.translate(number);
-        assertEquals(expectedResult,actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @DisplayName("Test with 9")
@@ -20,7 +20,7 @@ class FizzBuzzTranslateTest {
         int number = 9;
         String expectedResult = "Fizz";
         String actualResult = FizzBuzzTranslate.translate(number);
-        assertEquals(expectedResult,actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @DisplayName("Test with 20")
@@ -29,7 +29,7 @@ class FizzBuzzTranslateTest {
         int number = 20;
         String expectedResult = "Buzz";
         String actualResult = FizzBuzzTranslate.translate(number);
-        assertEquals(expectedResult,actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @DisplayName("Test with 15")
@@ -38,6 +38,15 @@ class FizzBuzzTranslateTest {
         int number = 15;
         String expectedResult = "FizzBuzz";
         String actualResult = FizzBuzzTranslate.translate(number);
-        assertEquals(expectedResult,actualResult);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @DisplayName("Test with 2")
+    @Test
+    void testTranslateCase5() {
+        int number = 2;
+        String expectedResult = "2";
+        String actualResult = FizzBuzzTranslate.translate(number);
+        assertEquals(expectedResult, actualResult);
     }
 }
