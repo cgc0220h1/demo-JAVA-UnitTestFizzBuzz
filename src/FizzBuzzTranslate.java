@@ -16,7 +16,14 @@ public class FizzBuzzTranslate {
                 || isContainedThree(number)) {
             return FIZZ;
         }
+        if (isLowerThan100(number)) {
+            return readNumber(number);
+        }
         return String.valueOf(number);
+    }
+
+    private static boolean isLowerThan100(int number) {
+        return number < 100;
     }
 
     private static boolean isDivisibleByThree(int number) {
@@ -51,5 +58,37 @@ public class FizzBuzzTranslate {
             }
         }
         return false;
+    }
+
+    private static String readNumber(int number) {
+        String str = String.valueOf(number);
+        char[] chars = str.toCharArray();
+        String strResult = "";
+        for (char character : chars) {
+            switch (character) {
+                case '1':
+                    strResult += "mot";
+                    break;
+                case '2':
+                    strResult += "hai";
+                    break;
+                case '4':
+                    strResult += "bon";
+                    break;
+                case '6':
+                    strResult += "sau";
+                    break;
+                case '7':
+                    strResult += "bay";
+                    break;
+                case '8':
+                    strResult += "tam";
+                    break;
+                case '9':
+                    strResult += "chin";
+                    break;
+            }
+        }
+        return strResult;
     }
 }
